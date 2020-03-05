@@ -24,7 +24,6 @@
                 <li><a href="info.html">Voertuig informatie</a></li>
                 <li><a href="omgeving.html" class="active">Voertuig omgeving</a></li>
                 <li><a href="voorraden.html">Voorraden</a></li>
-                <li><a href="tools.html">Tools</a></li>
             </ul>
 
         </nav>
@@ -36,7 +35,6 @@
                         <a href="info.html">Voertuig informatie</a>
                         <a href="omgeving.html" class="active">Voertuig omgeving</a>
                         <a href="voorraden.html">Voorraden</a>
-                        <a href="tools.html">Tools</a>
                     </div>
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars"></i>
@@ -97,72 +95,25 @@
                 </div>
                 <div>
                     <h2>Atmosfeer</h2>
-                    <canvas id="snelheid"></canvas>
+                    <canvas id="voorraad"></canvas>
                     <script>
-                        var ctx = document.getElementById('snelheid').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'polarArea',
-
-                            // The data for our dataset
+                        new Chart(document.getElementById("voorraad"), {
+                            type: 'doughnut',
                             data: {
-                                labels: ['km/u'],
+                                labels: ["Stikstof", "Zuurstof", "Argon", "Koolstofdioxide", "Waterstof"],
                                 datasets: [{
-                                    label: 'km/u',
-                                    backgroundColor: 'rgb(0,0,255,0.3)',
-                                    data: [1200]
+                                    label: "",
+                                    backgroundColor: ["rgb(0,0,255,0.3)", "rgb(0,255,0,0.3)", "rgb(255,0,0,0.3)", "rgb(0,255,255,0.3)", "rgb(255,0,255,0.3)"],
+                                    data: [100, 30, 20, 10, 60]
                                 }]
                             },
-
-                            // Configuration options go here
                             options: {}
                         });
 
                     </script>
-                </div>
-            </div>
-
-            <div class="flex-grid">
-
-                <!-- BRANDSTOF-->
-                <div>
-                    <h2>Snelheid</h2>
-                    <canvas id="acceleratie"></canvas>
-                    <script>
-                        var ctx = document.getElementById('acceleratie').getContext('2d');
-                        var chart = new Chart(ctx, {
-                            // The type of chart we want to create
-                            type: 'polarArea',
-
-                            // The data for our dataset
-                            data: {
-                                labels: ['km/u'],
-                                datasets: [{
-                                    label: 'km/u',
-                                    backgroundColor: 'rgb(0,0,255,0.3)',
-                                    data: [1200]
-                                }]
-                            },
-
-                            // Configuration options go here
-                            options: {}
-                        });
-
-                    </script>
-                </div>
-
-                <!-- SNELHEID-->
-                <div>
-
-                </div>
-                <div>
-
-                </div>
-                <div>
 
                 </div>
             </div>
-
 
             <div class="flex-grid">
                 <div>
